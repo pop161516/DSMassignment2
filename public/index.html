@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html>
     
-    <head>
-    <title>Icon Template Square</title>
-        <style>
-            .row{
-                width:720px;
-                margin: 10px auto 10px auto ;
-            }
-            .image-container {
-                display: table-cell;
-                vertical-align: middle;
-                padding:20px;
-            }
-        </style>
-    </head>
-
-    <body>
-
-        <div class="row">
-            <div class="image-container"><img id= "circle_id" src="img/cir.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/tri.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/squ.png" height="200" width="200"/></div>
-        </div>
-
-        <div class="row">
-            <div class="image-container"><img src="img/hex.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/rec.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/sta.png" height="200" width="200"/></div>
-        </div>
-
-        <div class="row">
-            <div class="image-container"><img src="img/trr.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/her.png" height="200" width="200"/></div>
-        </div>
+<head>
+    <title>Icon Template Percentage</title>
+    <style>
         
+        .row{
+            margin-top:40px;
+        }
+        .left-column{
+            float:left;
+            width:30%;
+            margin-left:30px;
+        }
+        .center-column{
+            width:30%;
+            margin:auto;
+        }
+        .right-column{
+            float:right;
+            width:30%;
+            margin:auto;
+        }
+        .image-container{
+            display: table-cell;
+            vertical-align: middle;
+            margin: auto;
+        }
+    
+header {
+	width: 100%;
+	height: 30%;
+	border-bottom: 5px solid #000000;
+}
+
+.cards {
+	width: 100%;
+	height: 5%;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.logo {
+	width: 10%;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 25px;
+	letter-spacing: 4px;
+}
+
+.logoright {
+    width: 10%;
+	float: right;
+	margin-top: 15px;
+	margin-right: 25px;
+	letter-spacing: 4px;
+}
+
+.hero {
+	background-color: #FFFFFF;
+	padding-top: 200px;
+	padding-bottom: 455px;
+}
+    </style>
+</head>
+
+    <body style="background-color: #000000;">
+
+        <header> 
+            <a href="">
+            <h4 class="logo"><img src="img/settingsdraft copy.png" alt="" class="cards"/></h4>
+            </a>
+            <a href="">
+                <h4 class="logo"><img src="img/activitydraft copy.png" alt="" class="cards"/></h4>
+                </a>
+          </header>
+
+          <section class="hero" id="hero">
+          </section>
+        
+        <header> 
+            <a href="">
+            <h4 class="logo"><img id= "move_id" src="img/movedraft copy.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img src="img/attackdraft copy.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img src="img/builddraft copy.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img src="img/unlockdraft copy.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img src="img/tradedraft copy.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img src="img/selldraft copy.png" alt="" class="cards"/></h4>
+            <h4 class="logoright"><img src="img/enddraft copy.png" alt="" class="cards"/></h4>
+            </a>
+          </header>
+
     </body>
     
 </html>
 <script>
     const zip_sound = document.createElement ("audio")
-    zip_sound.src = "sounds/rail_slide.mp3"
+    zip_sound.src = "CleanSound/CleanZip01.mp3"
     
-    const circle_element = document.getElementById ("circle_id")
+    const circle_element = document.getElementById ("move_id")
     circle_element.onpointerover = () => {
         circle_element.src = "img/hex.png"
     }
-    circle_element.onpointerout = () => {
-        circle_element.src = "img/cir.png"
+    circle_element.onpointerout = () => { 
+        circle_element.src = "img/moveDraft copy.png"
     }
     circle_element.onpointerdown = () => {
-        slide_sound.play ()
+        zip_sound.play ()
     }
 </script>
