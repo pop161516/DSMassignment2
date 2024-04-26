@@ -114,10 +114,10 @@ header {
     const icon_elements = Array.from (document.getElementsByTagName (`img`))
     icon_elements.forEach ((element, index) => {
         element.onpointerover = () => {
-            element.src = `images/changed/${ index }.png`
+            element.src = `img/changed/${ index }.png`
         }
         element.onpointerleave = () => {
-            element.src = `images/original/${ index }.png`
+            element.src = `img/original/${ index }.png`
         }
     })
 </script>
