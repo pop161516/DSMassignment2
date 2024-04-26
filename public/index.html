@@ -94,34 +94,32 @@ header {
     </body>
     
 </html>
-<script>
-    // MOVE
-    const zip_sound = document.createElement ("audio")
-    zip_sound.src = "CleanSound/CleanZip01.mp3"
-    
-    const circle_element = document.getElementById ("move_id")
-    circle_element.onpointerover = () => {
-        circle_element.src = "img/tri.png"
-    }
-    circle_element.onpointerout = () => { 
-        circle_element.src = "img/MOVE1.png"
-    }
-    circle_element.onpointerdown = () => {
-        zip_sound.play ()
-    }
 
-    //ATTACK
-    const zip_sound = document.createElement ("audio")
-    zip_sound.src = "CleanSound/CleanZip01.mp3"
+<script>
+    // // MOVE
+    // const zip_sound = document.createElement ("audio")
+    // zip_sound.src = "CleanSound/CleanZip01.mp3"
     
-    const circle_element = document.getElementById ("attack_id")
-    circle_element.onpointerover = () => {
-        circle_element.src = "img/ATTACK2.png"
-    }
-    circle_element.onpointerout = () => { 
-        circle_element.src = "img/ATTACK1.png"
-    }
-    circle_element.onpointerdown = () => {
-        zip_sound.play ()
-    }
+    // const circle_element = document.getElementById ("move_id")
+    // circle_element.onpointerover = () => {
+    //     circle_element.src = "img/MOVE2.png"
+    // }
+    // circle_element.onpointerout = () => { 
+    //     circle_element.src = "img/MOVE1.png"
+    // }
+    // circle_element.onpointerdown = () => {
+    //     zip_sound.play ()
+    // }
+
+    const icon_elements = Array.from (document.getElementsByTagName (`img`))
+    icon_elements.forEach ((element, index) => {
+        const audio = new Audio (`sounds/${ index }.mp3`)
+        element.onpointerover = () => {
+            element.src = `images/changed/${ index }.png`
+        }
+        element.onpointerleave = () => {
+            element.src = `images/original/${ index }.png`
+        }
+        element.onpointerdown = () => audio.play ()
+    })
 </script>
