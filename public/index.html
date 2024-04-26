@@ -31,7 +31,8 @@
 header {
 	width: 100%;
 	height: 30%;
-	border-bottom: 5px solid #000000;
+    background-color: #262626;
+    border-radius: 25px;
 }
 
 .cards {
@@ -55,12 +56,16 @@ header {
 	margin-top: 15px;
     margin-bottom: 1px;
     margin-right: 25px;
+
 }
 
 .hero {
-	background-color: #262626;
+    background-image: url("img/IHOPETHISWORKS.png");
+    border-radius: 25px;
 	padding-top: 200px;
 	padding-bottom: 475px;
+    background-repeat: no-repeat;
+    background-size: 1261.9px 800px;
 }
     </style>
 </head>
@@ -74,10 +79,11 @@ header {
             <a href="">
                 <h4 class="logo"><img id= "log_id" src="img/ACTIVITYLOG1.png" alt="" class="cards"/></h4>
                 </a>
-          </header>
+        </header>
 
-          <section class="hero" id="hero">
-          </section>
+<section class="hero" id="hero">
+
+</section>
         
         <header> 
             <a href="">
@@ -120,4 +126,5 @@ header {
             element.src = `img/original/${ index }.png`
         }
     })
+
 </script>
