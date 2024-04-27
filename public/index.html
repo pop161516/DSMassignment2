@@ -48,6 +48,9 @@ header {
 	margin-top: 15px;
 	margin-bottom: 1px;
 	margin-left: 25px;
+    background-color: #303030;
+    border-radius: 25px;
+
 }
 
 .logoright {
@@ -60,12 +63,12 @@ header {
 }
 
 .hero {
-    background-image: url("img/IHOPETHISWORKS.png");
+    background-image: url("img/BACKGOUNDTILE.png");
     border-radius: 25px;
 	padding-top: 200px;
 	padding-bottom: 475px;
-    background-repeat: no-repeat;
-    background-size: 1261.9px 800px;
+
+    
 }
     </style>
 </head>
@@ -79,21 +82,19 @@ header {
             <a href="">
                 <h4 class="logo"><img id= "log_id" src="img/ACTIVITYLOG1.png" alt="" class="cards"/></h4>
                 </a>
-        </header>
+        </header>   
 
-<section class="hero" id="hero">
-
-</section>
+<section class="hero" id="hero"></section>
         
         <header> 
             <a href="">
-            <h4 class="logo"><img id= "move_id" src="img/MOVE1.png" alt="" class="cards"/></h4>
-            <h4 class="logo"><img id= "attack_id" src="img/ATTACK1.png" alt="" class="cards"/></h4>
-            <h4 class="logo"><img id= "build_id" src="img/BUILD1.png" alt="" class="cards"/></h4>
-            <h4 class="logo"><img id= "unlock_id" src="img/UNLOCK1.png" alt="" class="cards"/></h4>
-            <h4 class="logo"><img id= "trade_id" src="img/TRADE1.png" alt="" class="cards"/></h4>
-            <h4 class="logo"><img id= "sell_id" src="img/SELL1.png" alt="" class="cards"/></h4>
-            <h4 class="logoright"> <img id= "end_id" src="img/ENDTURN1.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img id= "move_id" src="img/original/2.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img id= "attack_id" src="img/original/3.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img id= "build_id" src="img/original/4.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img id= "unlock_id" src="img/original/5.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img id= "trade_id" src="img/original/6.png" alt="" class="cards"/></h4>
+            <h4 class="logo"><img id= "sell_id" src="img/original/7.png" alt="" class="cards"/></h4>
+            <h4 class="logoright"> <img id= "end_id" src="img/original/8.png" alt="" class="cards"/></h4>
             </a>
           </header>
 
@@ -102,29 +103,18 @@ header {
 </html>
 
 <script>
-    // // MOVE
-    // const zip_sound = document.createElement ("audio")
-    // zip_sound.src = "CleanSound/CleanZip01.mp3"
-    
-    // const circle_element = document.getElementById ("move_id")
-    // circle_element.onpointerover = () => {
-    //     circle_element.src = "img/MOVE2.png"
-    // }
-    // circle_element.onpointerout = () => { 
-    //     circle_element.src = "img/MOVE1.png"
-    // }
-    // circle_element.onpointerdown = () => {
-    //     zip_sound.play ()
-    // }
 
     const icon_elements = Array.from (document.getElementsByTagName (`img`))
     icon_elements.forEach ((element, index) => {
+        const audio = new Audio (`sounds/${ index }.mp3`)
         element.onpointerover = () => {
             element.src = `img/changed/${ index }.png`
         }
         element.onpointerleave = () => {
             element.src = `img/original/${ index }.png`
         }
+        element.onpointerdown = () => audio.play ()
     })
+
 
 </script>
